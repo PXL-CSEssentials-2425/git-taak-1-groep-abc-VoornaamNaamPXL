@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace TabelVoorbeeld
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+            dataGridView1.ColumnCount = 3;
+            dataGridView1.Columns[0].Name = "ID";
+            dataGridView1.Columns[1].Name = "Naam";
+            dataGridView1.Columns[2].Name = "Leeftijd";
+
+           
+            string[] rij1 = new string[] { "1", "Jan", "25" };
+            string[] rij2 = new string[] { "2", "Piet", "30" };
+            string[] rij3 = new string[] { "3", "Klaas", "45" };
+
+            dataGridView1.Rows.Add(rij1);
+            dataGridView1.Rows.Add(rij2);
+            dataGridView1.Rows.Add(rij3);
+
+            
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
